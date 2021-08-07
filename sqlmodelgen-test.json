@@ -1,0 +1,36 @@
+{
+	"namespace": "cham",
+	"databases": {
+		"Prothy_Bucks": {
+			"schemas": {
+				"dbo": {
+					"tables": {
+						"Filing": {
+							"columns": {
+								"FilingID": {
+									"pk": true,
+									"type": "int(64)"
+								},
+								"DocketID": {
+									"fk": "Docket.DocketID",
+									"type": "int(64)"
+								}
+							}
+						},
+						"Docket": {
+							"columns": {
+								"DocketID": {
+									"pk": true,
+									"type": "int(64)"
+								},
+								"Description": {
+									"type": "string(length: 64)"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
